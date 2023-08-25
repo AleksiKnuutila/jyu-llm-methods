@@ -1,4 +1,16 @@
-# A little bit about me 
+---
+theme: mattropolis
+---
+
+## Text classification and annotation with large language models 
+
+
+Aleksi Knuutila, 5.9.2023
+
+
+---
+
+## A little bit about me 
 
 - Postdoc researcher in Helsinki and Jyväskylä
 - Working on information environment in Ukraine, hate speech in Finland
@@ -14,7 +26,7 @@
 
 ---
 
-# Plan for 2 sessions
+## Plan for 2 sessions
 
 - 05.09.2023 12.00 - 14.00: Introduction into LLM analysis and notebook environment for practical exercise
 
@@ -22,7 +34,7 @@
 
 ---
 
-# Structure of presentation in first session
+## Structure of presentation in first session
 
 1. What are LLMs
 2. Different workflows with LLMs: Supervised categorisation and zero-shot annotation
@@ -31,14 +43,14 @@
 
 ---
 
-# Learning goals for sessions
+## Learning goals for sessions
 
 - Understand what LLMs do and whether they will be useful for your research
 - Some basic techniques and experience for text classification and text annotation with LLMs
 
 ---
 
-# Examples of LLMs
+## Examples of LLMs
 
 ![[Untitled design.png]]
 
@@ -55,7 +67,7 @@ Llama, open source, though designation is controversial
 
 ---
 
-# What are LLMs? Some analogies
+## What are LLMs? Some analogies
 
 - Emily Bender et al.: Stochastic parrots
 - Ted Chiang: "ChatGPT is a Blurry JPEG of the Web"
@@ -65,7 +77,7 @@ Sources: Bender et al. "On the Dangers of Stochastic Parrots: Can Language Model
 
 ---
 
-# What are LLMs? A definition
+## What are LLMs? A definition
 
 ![[Pasted image 20230825094408.png]]
 
@@ -78,7 +90,7 @@ Source: Luccioni, Alexandra Sasha, and Anna Rogers. “Mind Your Language (Model
 
 ---
 
-# How LLMs can help social scientists
+## How LLMs can help social scientists
 
 - Writing assistants
 - Preprocessing datasets, eg. by summarising or generating keywords
@@ -89,7 +101,7 @@ Source: Ziems, Caleb et al. "Can Large Language Models Transform Computational S
 
 ---
 
-# Validating analysis requires people
+## Validating analysis requires people
 
 - Core challenge for analysis is finding analytical concepts that
 1. Provide analytical value, i.e. reveal something insightful about data
@@ -101,7 +113,7 @@ Source: Ziems, Caleb et al. "Can Large Language Models Transform Computational S
 
 ---
 
-# Typical workflow for modelling work
+## Typical workflow for modelling work
 
 ![[Pasted image 20230824122151.png]]
 
@@ -124,7 +136,7 @@ https://www.researchgate.net/figure/A-four-step-predictive-modeling-workflow-1-D
 
 ---
 
-# Potential changes in workflows with LLMs
+## Potential changes in workflows with LLMs
 
 
 ![[Pasted image 20230823151209.png]]
@@ -155,7 +167,7 @@ With Zero-shot, we have LLMs that read instructions, that may include data
 
 ---
 
-# Example of supervised text categorisation
+## Example of supervised text categorisation
 
 ![[Pasted image 20230823154547.png]]
 
@@ -165,7 +177,7 @@ With Zero-shot, we have LLMs that read instructions, that may include data
 
 ---
 
-# Creating a dataset for training
+## Creating a dataset for training
 
 ![](https://lh4.googleusercontent.com/j3ZIqARtgVoUWIqi4si2MHr6L1-n_S1T9fZ0nTBc9i7GLK9lVO4DsdsEQtx3yOs4JNxzOOOHewsSwsUPITWLkmKjajw1fOCUbKpGIOsD92OTGoh1lvFzj9bwqp1w_bPMXv8UZI6SOEdJpLYy4uE8iqlY=s2048)
 
@@ -176,7 +188,7 @@ Programming by example
 
 ---
 
-# Finetuning an LLM for text classification
+## Finetuning an LLM for text classification
 
 ![[Pasted image 20230823215930.png]]
 
@@ -191,7 +203,7 @@ In finetuning for classification, we add this output layer, to perform.
 
 ---
 
-# Finetuning a model in Python
+## Finetuning a model in Python
 
 ```
 model = AutoModelForSequenceClassification.from_pretrained(
@@ -221,25 +233,25 @@ Source: https://github.com/AleksiKnuutila/nethate_classifier/blob/master/train.p
 
 ---
 
-# Categorisation results
+## Categorisation results
 
 ![[Pasted image 20230824091656.png]]
 
 ---
 
-# Evaluating the performance of the classification
+## Evaluating the performance of the classification
 
 ![[Pasted image 20230824091245.png]]
 
 ---
 
-# Examining how the model works
+## Examining how the model works
 
 ![](https://lh6.googleusercontent.com/V3wgxHSkxcygNlCdtcZ83k2b7H_f-Yogj0qPeFck2Gg7q9nKFcqTzNicH3tXy4AU6Q9jG4YPSSDyDujd-7FrSFKV28JGEAhIpzdKB16k8_BD5xHc1vRjwLsmMiqMuTD026yW2I91GJo7Z3xJtEppx_j0=s2048)
 
 ---
 
-# An alternative workflow: zero-shot annotation
+## An alternative workflow: zero-shot annotation
 
 - Can be done with LLMs that are trained to be directed with prompts
 - Zero-shot: When the model is asked to perform a task that it hasn't specifically been trained on, i.e. to apply new categories that are described to it
@@ -250,7 +262,7 @@ Source: Pangakis et al. "Automated Annotation with Generative AI Requires Valida
 
 ---
 
-# Example of zero-shot annotation
+## Example of zero-shot annotation
 
 ![[Pasted image 20230824094514.png]]
 
@@ -264,7 +276,7 @@ Literary-critical tradition suggested that there had been a pretty stable balanc
 
 ---
 
-# Prompting GPT-4 to read fiction
+## Prompting GPT-4 to read fiction
 
 ```
 Read the following passage of fiction. Then do five things.
@@ -294,7 +306,7 @@ Source: https://tedunderwood.com/2023/03/19/using-gpt-4-to-measure-the-passage-o
 
 ---
 
-# Results
+## Results
 
 ```
 1: A detective wakes up 'the next morning,' looks out a window for an undefined 
@@ -315,7 +327,7 @@ say no, since yesterday is not actually described. So, an hour to 90 minutes.
 
 ---
 
-# Findings
+## Findings
 
 ![[Pasted image 20230825100706.png]]
 "Watching the model think out loud about each passage actually gave me a better sense of how results were produced than I could extract from my own records of human research in 2017."
@@ -324,7 +336,7 @@ say no, since yesterday is not actually described. So, an hour to 90 minutes.
 
 
 
-# Thematic analysis with LLMs?
+## Thematic analysis with LLMs?
 
 - XXX
 - Possible source: https://arxiv.org/pdf/2305.13014.pdf
@@ -333,7 +345,7 @@ say no, since yesterday is not actually described. So, an hour to 90 minutes.
 -->
 
 <!--
-# Simple guidelines for "prompt engineering"
+## Simple guidelines for "prompt engineering"
 
 - Giving examples
 - Providing persona
@@ -342,7 +354,7 @@ say no, since yesterday is not actually described. So, an hour to 90 minutes.
 
 ---
 
-# General challenges of working with LLMs
+## General challenges of working with LLMs
 
 - Most recent powerful models closed, proprietary, opaque
 - Proprietary models make research hard to reproduce
@@ -353,7 +365,7 @@ say no, since yesterday is not actually described. So, an hour to 90 minutes.
 
 ---
 
-# LLMs might help scientists to focus on data
+## LLMs might help scientists to focus on data
 
 ![[Pasted image 20230822152758.png]]
 
@@ -365,7 +377,7 @@ And the technique is a secondary need
 
 ---
 
-# LLMs might help develop analytical concepts
+## LLMs might help develop analytical concepts
 
 ![[Pasted image 20230824121403.png]]
 

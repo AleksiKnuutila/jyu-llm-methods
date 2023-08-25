@@ -87,7 +87,14 @@
       <div class="slides"><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
-# A little bit about me 
+## Text classification and annotation with large language models 
+
+
+Aleksi Knuutila, 5.9.2023
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## A little bit about me 
 
 - Postdoc researcher in Helsinki and Jyväskylä
 - Working on information environment in Ukraine, hate speech in Finland
@@ -103,7 +110,7 @@
 </div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
-# Plan for 2 sessions
+## Plan for 2 sessions
 
 - 05.09.2023 12.00 - 14.00: Introduction into LLM analysis and notebook environment for practical exercise
 
@@ -111,7 +118,7 @@
 </div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
-# Structure of presentation in first session
+## Structure of presentation in first session
 
 1. What are LLMs
 2. Different workflows with LLMs: Supervised categorisation and zero-shot annotation
@@ -120,14 +127,14 @@
 </div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
-# Learning goals for sessions
+## Learning goals for sessions
 
 - Understand what LLMs do and whether they will be useful for your research
 - Some basic techniques and experience for text classification and text annotation with LLMs
 </div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
-# Examples of LLMs
+## Examples of LLMs
 
 <img src="Untitled design.png" alt="" style="object-fit: scale-down">
 
@@ -145,7 +152,7 @@ Llama, open source, though designation is controversial
 </div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
-# What are LLMs? Some analogies
+## What are LLMs? Some analogies
 
 - Emily Bender et al.: Stochastic parrots
 - Ted Chiang: "ChatGPT is a Blurry JPEG of the Web"
@@ -155,7 +162,7 @@ Sources: Bender et al. "On the Dangers of Stochastic Parrots: Can Language Model
 </div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
-# What are LLMs? A definition
+## What are LLMs? A definition
 
 <img src="Pasted image 20230825094408.png" alt="" style="object-fit: scale-down">
 
@@ -169,7 +176,7 @@ Source: Luccioni, Alexandra Sasha, and Anna Rogers. “Mind Your Language (Model
 </div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
-# How LLMs can help social scientists
+## How LLMs can help social scientists
 
 - Writing assistants
 - Preprocessing datasets, eg. by summarising or generating keywords
@@ -180,7 +187,7 @@ Source: Ziems, Caleb et al. "Can Large Language Models Transform Computational S
 </div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
-# Validating analysis requires people
+## Validating analysis requires people
 
 - Core challenge for analysis is finding analytical concepts that
 1. Provide analytical value, i.e. reveal something insightful about data
@@ -192,7 +199,7 @@ Source: Ziems, Caleb et al. "Can Large Language Models Transform Computational S
 </div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
-# Typical workflow for modelling work
+## Typical workflow for modelling work
 
 <img src="Pasted image 20230824122151.png" alt="" style="object-fit: scale-down">
 
@@ -216,7 +223,7 @@ https://www.researchgate.net/figure/A-four-step-predictive-modeling-workflow-1-D
 </div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
-# Potential changes in workflows with LLMs
+## Potential changes in workflows with LLMs
 
 
 <img src="Pasted image 20230823151209.png" alt="" style="object-fit: scale-down">
@@ -248,7 +255,7 @@ With Zero-shot, we have LLMs that read instructions, that may include data
 </div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
-# Example of supervised text categorisation
+## Example of supervised text categorisation
 
 <img src="Pasted image 20230823154547.png" alt="" style="object-fit: scale-down">
 
@@ -259,7 +266,7 @@ With Zero-shot, we have LLMs that read instructions, that may include data
 </div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
-# Creating a dataset for training
+## Creating a dataset for training
 
 <img src="https://lh4.googleusercontent.com/j3ZIqARtgVoUWIqi4si2MHr6L1-n_S1T9fZ0nTBc9i7GLK9lVO4DsdsEQtx3yOs4JNxzOOOHewsSwsUPITWLkmKjajw1fOCUbKpGIOsD92OTGoh1lvFzj9bwqp1w_bPMXv8UZI6SOEdJpLYy4uE8iqlY=s2048" alt="" style="object-fit: scale-down">
 
@@ -271,7 +278,7 @@ Programming by example
 </div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
-# Finetuning an LLM for text classification
+## Finetuning an LLM for text classification
 
 <img src="Pasted image 20230823215930.png" alt="" style="object-fit: scale-down">
 
@@ -287,7 +294,7 @@ In finetuning for classification, we add this output layer, to perform.
 </div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
-# Finetuning a model in Python
+## Finetuning a model in Python
 
 ```
 model = AutoModelForSequenceClassification.from_pretrained(
@@ -317,25 +324,25 @@ Source: https://github.com/AleksiKnuutila/nethate_classifier/blob/master/train.p
 </div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
-# Categorisation results
+## Categorisation results
 
 <img src="Pasted image 20230824091656.png" alt="" style="object-fit: scale-down">
 </div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
-# Evaluating the performance of the classification
+## Evaluating the performance of the classification
 
 <img src="Pasted image 20230824091245.png" alt="" style="object-fit: scale-down">
 </div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
-# Examining how the model works
+## Examining how the model works
 
 <img src="https://lh6.googleusercontent.com/V3wgxHSkxcygNlCdtcZ83k2b7H_f-Yogj0qPeFck2Gg7q9nKFcqTzNicH3tXy4AU6Q9jG4YPSSDyDujd-7FrSFKV28JGEAhIpzdKB16k8_BD5xHc1vRjwLsmMiqMuTD026yW2I91GJo7Z3xJtEppx_j0=s2048" alt="" style="object-fit: scale-down">
 </div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
-# An alternative workflow: zero-shot annotation
+## An alternative workflow: zero-shot annotation
 
 - Can be done with LLMs that are trained to be directed with prompts
 - Zero-shot: When the model is asked to perform a task that it hasn't specifically been trained on, i.e. to apply new categories that are described to it
@@ -346,7 +353,7 @@ Source: Pangakis et al. "Automated Annotation with Generative AI Requires Valida
 </div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
-# Example of zero-shot annotation
+## Example of zero-shot annotation
 
 <img src="Pasted image 20230824094514.png" alt="" style="object-fit: scale-down">
 
@@ -361,7 +368,7 @@ Literary-critical tradition suggested that there had been a pretty stable balanc
 </div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
-# Prompting GPT-4 to read fiction
+## Prompting GPT-4 to read fiction
 
 ```
 Read the following passage of fiction. Then do five things.
@@ -391,7 +398,7 @@ Source: https://tedunderwood.com/2023/03/19/using-gpt-4-to-measure-the-passage-o
 </div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
-# Results
+## Results
 
 ```
 1: A detective wakes up 'the next morning,' looks out a window for an undefined 
@@ -412,7 +419,7 @@ say no, since yesterday is not actually described. So, an hour to 90 minutes.
 </div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
-# Findings
+## Findings
 
 <img src="Pasted image 20230825100706.png" alt="" style="object-fit: scale-down">
 
@@ -422,7 +429,7 @@ say no, since yesterday is not actually described. So, an hour to 90 minutes.
 
 
 
-# Thematic analysis with LLMs?
+## Thematic analysis with LLMs?
 
 - XXX
 - Possible source: https://arxiv.org/pdf/2305.13014.pdf
@@ -431,7 +438,7 @@ say no, since yesterday is not actually described. So, an hour to 90 minutes.
 -->
 
 <!--
-# Simple guidelines for "prompt engineering"
+## Simple guidelines for "prompt engineering"
 
 - Giving examples
 - Providing persona
@@ -440,7 +447,7 @@ say no, since yesterday is not actually described. So, an hour to 90 minutes.
 </div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
-# General challenges of working with LLMs
+## General challenges of working with LLMs
 
 - Most recent powerful models closed, proprietary, opaque
 - Proprietary models make research hard to reproduce
@@ -451,7 +458,7 @@ say no, since yesterday is not actually described. So, an hour to 90 minutes.
 </div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
-# LLMs might help scientists to focus on data
+## LLMs might help scientists to focus on data
 
 <img src="Pasted image 20230822152758.png" alt="" style="object-fit: scale-down">
 
@@ -464,7 +471,7 @@ And the technique is a secondary need
 </div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
-# LLMs might help develop analytical concepts
+## LLMs might help develop analytical concepts
 
 <img src="Pasted image 20230824121403.png" alt="" style="object-fit: scale-down">
 
