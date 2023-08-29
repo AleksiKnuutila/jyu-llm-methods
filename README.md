@@ -1,6 +1,6 @@
 ## Text classification and annotation with large language models 
 
-A methods course at the University of Jyväskylä.
+A methods course at the University of Jyväskylä. Check Moodle for the most up to date information about the course.
 
 **Description**
 
