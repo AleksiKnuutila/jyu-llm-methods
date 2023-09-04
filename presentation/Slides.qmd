@@ -409,7 +409,7 @@ say no, since yesterday is not actually described. So, an hour to 90 minutes.
 - Trying to get machine-readable output can be a challenge
 -->
 
-# Some conclusions {background-color="#40666e"}
+# Brief summary {background-color="#40666e"}
 
 ## General challenges of working with LLMs
 
