@@ -160,7 +160,21 @@ https://www.researchgate.net/figure/A-four-step-predictive-modeling-workflow-1-D
 ![](Pasted image 20230823151209.png)
 
 - LLMs are "Swiss army knives": Single models can be applied for many different tasks
+- A potential simplification in expertise required for modeling - but at a cost!
+
+::: {.notes}
 - Transfer learning: Models trained on large corpora can be applied in other domains
+
+- Typically, when working with large datasets, a researcher would have to find a specific model
+
+- Language models are decent at many things - standardisation in the modelling phase of research
+
+- Creates other challenges - dependency on companies that pretrain models, ethical dilemmas
+
+- General tool, simplifies the process of model selection
+
+- Though there are several LLMs too! And computationally intensive, so it's like a tradeoff
+:::
 
 <!--
 - Sometimes SOTA, sometimes specific models 
@@ -336,9 +350,9 @@ Read the following passage of fiction. Then do five things.
  
 1: Briefly summarize the passage.
 
-2: Reason step by step to decide how much time is described in the passage. If the
+2: **Reason step by step to decide how much time is described in the passage. If the
 passage doesn't include any explicit reference to time, you can guess how much 
-time the events described would have taken. Even description can imply the 
+time the events described would have taken**. Even description can imply the 
 passage of time by describing the earlier history of people or buildings. But 
 characters' references to the past or future in spoken dialogue should not count 
 as time that passed in the scene. Report the time using units of years, weeks, 
@@ -369,10 +383,10 @@ Source: https://tedunderwood.com/2023/03/19/using-gpt-4-to-measure-the-passage-o
 time, drinks (and presumably needs to make) two cups of coffee, then shaves and 
 showers and gets dressed before stepping out his front door and seeing a car.
 
-2: Making coffee, showering, and getting dressed take at least an hour. There's 
+2: **Making coffee, showering, and getting dressed take at least an hour. There's 
 some ambiguity about whether to count the implicit reference to yesterday 
 (since this is 'the next morning') as time elapsed in the passage, but let's 
-say no, since yesterday is not actually described. So, an hour to 90 minutes.
+say no, since yesterday is not actually described. So, an hour to 90 minutes.**
 
 3: 1.25 hours have elapsed. Multiplying by 60 minutes an hour that's 75 minutes.
 
@@ -425,10 +439,9 @@ say no, since yesterday is not actually described. So, an hour to 90 minutes.
 :::: {.columns}
 
 ::: {.column width="50%" style="font-size: 80%;"}
-- Challenge of finding right analytical concepts particularly prevalent in hate speech research
+- Finding right analytical concepts is a frequent challenge
 - Previously the high cost of modelling meant concept development done on subset of data, before modelling
 - LLMs may reduce cost of modelling and make it easier to iteratively read large datasets with novel concepts
-- LLMs introduce their own ethical issues and dependencies
 :::
 
 ::: {.column width="50%" style="font-size: 50%;"}
@@ -451,6 +464,45 @@ Source: Tracy, "A Phronetic Iterative Approach to Data Analysis in Qualitative R
 - Visualised, Tracy, phronetic approach, hermeneutic circle, defined in contrast with grounded theory..
 :::
 
-# Thanks! Any questions?
+# Thanks! Any questions? {background-color="#40666e"}
 
-# Let's try to access CSC notebooks
+Slides at http://knuutila.net/llm_methods
+
+## Let's try to access CSC notebooks
+
+- Go to the URL https://notebooks.rahtiapp.fi
+- Log in with Haka account
+- Press "Join workspace" in top right
+- Enter code jyu-07ippvlk
+- You may press power button icon to start your own virtual machine
+- After waiting a moment, you can press in the same location to "enter session"
+
+## Using Jupyter Labs
+
+- After you have entered your session, you are inside of a system called Jupyter Labs, where you can view and execute Jupyter Notebooks
+- On the left, you have list of files and folders. Double click on "jyu-llm-methods"
+- There are two notebook files with filenames "Exercise_...". Double click both to open them
+- Note that the virtual machine only lasts for 12 hours, and not all folders persistent
+
+::: {.notes}
+- Haven't used this in teaching!
+- CSC just one platform for computation, notebooks can be run elsewhere too
+:::
+
+## 2 exercises
+
+1. Text classification with supervised learning and finetuning an LLM
+    - Example data: Yelp reviews with positive/negative classification
+    - Some techniques for evaluating results, such as confusion matrices and "scattertext" for false classifications
+    - Tasks: E.g. try out with other data, examine biases
+2. Zero-shot text annotation by prompting an LLM
+    - Example data: Russian and British news articles about Ukraine
+    - Sample prompts for extracting sources of information
+    - Tasks: E.g. Try out other prompts, examine model's mistakes
+3. Text classification/annotation in ChatGPT
+    - If you would rather not use the notebook interface or Python, feel free to think of applying other interfaces such as ChatGPT for your work
+
+:: {.notes}
+- Spirit of exercises: above all, try out something that is useful for you 
+- Here are some resources that you can work with
+:::
