@@ -489,7 +489,9 @@ Slides at http://knuutila.net/llm_methods
 - CSC just one platform for computation, notebooks can be run elsewhere too
 :::
 
-## 2 exercises
+## 3 exercises for next session
+
+::: {style="font-size: 75%;"}
 
 1. Text classification with supervised learning and finetuning an LLM
     - Example data: Yelp reviews with positive/negative classification
@@ -502,7 +504,9 @@ Slides at http://knuutila.net/llm_methods
 3. Text classification/annotation in ChatGPT
     - If you would rather not use the notebook interface or Python, feel free to think of applying other interfaces such as ChatGPT for your work
 
-:: {.notes}
+:::
+
+::: {.notes}
 - Spirit of exercises: above all, try out something that is useful for you 
 - Here are some resources that you can work with
 :::
